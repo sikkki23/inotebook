@@ -4,10 +4,10 @@ import Notes from './Notes'
 import AddNote from './AddNote';
 
 
-function Home() {
+const Home = (props) => {
 //  const context = useContext(noteContext);
  // const {notes,setNotes} = context;
-
+ const {showAlert} = props;
  const context = useContext(noteContext);
   const {notes,setNotes} = context;
 
@@ -15,7 +15,7 @@ function Home() {
   return (
     <div>
      
-       <Notes/>
+       <Notes showAlert={showAlert}/>
     </div>
   );
 }
